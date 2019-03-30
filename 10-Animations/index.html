@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animations</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation: 1.5s scaleAndRotateSquare infinite ease-in-out;
+      }
+      /*       아래처럼 from - to 쓸 수도 있고 %로 표현해서 여러 단계 가능
+@keyframes scaleAndRotateSquare {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(1turn) scale(0.5, 0.5);
+  }
+} */
+      @keyframes scaleAndRotateSquare {
+        0% {
+          transform: none;
+        }
+        50% {
+          transform: rotate(1turn) scale(0.5, 0.5);
+        }
+        100% {
+          transform: rotate(2turn) scale(1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

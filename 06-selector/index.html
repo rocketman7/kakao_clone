@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Selectors and Pseudo Selectors</title>
+    <style>
+      /*       클래스 지정하지 않고 Psuedo Selector 이용 */
+      input[type="submit"] {
+        background-color: yellow;
+      }
+      input[type="password"] {
+        background-color: green;
+      }
+      input {
+        border: 1px solid red;
+      }
+      .box {
+        background-color: green;
+        display: block;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .box:nth-child(2) {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"><input type="password" /> <input type="submit" /></div>
+    </div>
+  </body>
+</html>
